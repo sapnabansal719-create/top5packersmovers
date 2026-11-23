@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="content-language" content="en-IN">
-  <meta name="language" content="English">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Packers and Movers in Panchkula | Top5packersmovers</title>
   <meta name="description" content="Compare Top 5 verified packers and movers in Panchkula (HUDA Sectors, MDC, Pinjore, Kalka &amp; Tricity). Check local &amp; intercity shifting rates, car/bike transport &amp; book free quotes.">
@@ -44,7 +42,7 @@
     "url": "https://top5packersmovers.in/packers-movers-panchkula.html",
     "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='58' fill='%230f2942'/%3E%3Ctext x='60' y='65' text-anchor='middle' font-family='Arial,sans-serif' font-size='11' font-weight='700' fill='%23ffffff'%3ETop5packersmovers%3C/text%3E%3C/svg%3E",
     "description": "Compare Top 5 verified packers and movers in Panchkula & Tricity serving Sector 1 to 28, Mansa Devi Complex (MDC), Sector 20 societies, Pinjore, Kalka, Chandigarh, Mohali, and Zirakpur.",
-    "telephone": "+91-9876543210",
+    "telephone": "+91-7009609889",
     "priceRange": "₹3,500 - ₹45,000+",
     "address": {
       "@type": "PostalAddress",
@@ -328,6 +326,8 @@
     html {
       scroll-behavior: smooth;
       -webkit-text-size-adjust: 100%;
+      max-width: 100%;
+      overflow-x: clip;
     }
 
     body {
@@ -337,7 +337,9 @@
       line-height: 1.6;
       color: var(--slate-900);
       background-color: var(--white);
-      overflow-x: hidden;
+      max-width: 100%;
+      overflow-x: clip;
+      overflow-wrap: break-word;
     }
 
     a {
@@ -355,6 +357,18 @@
       display: block;
       max-width: 100%;
       height: auto;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     .skip-link {
@@ -377,10 +391,11 @@
       max-width: var(--max-w);
       margin-inline: auto;
       padding-inline: 16px;
+      min-width: 0;
     }
 
     .section {
-      padding-block: 56px;
+      padding-block: 52px;
     }
     .section-alt {
       background-color: var(--slate-50);
@@ -391,14 +406,14 @@
     .section-header {
       text-align: center;
       max-width: 780px;
-      margin: 0 auto 36px;
+      margin: 0 auto 32px;
     }
     .eyebrow {
       display: inline-block;
       background: var(--blue-50);
       color: var(--navy-900);
       border: 1px solid #bfdbfe;
-      font-size: 0.8125rem;
+      font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -406,19 +421,30 @@
       border-radius: 999px;
       margin-bottom: 10px;
     }
-    h1, h2, h3, h4 {
+    h1, h2, h3 {
       color: var(--navy-900);
       line-height: 1.25;
       margin-top: 0;
     }
     h2 {
-      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
       margin-bottom: 10px;
     }
     .section-subtitle {
       color: var(--slate-600);
       margin: 0;
-      font-size: 1.02rem;
+      font-size: 1rem;
+    }
+    .card-title {
+      color: var(--navy-900);
+      font-weight: 800;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      margin: 0 0 6px;
+    }
+    .cell-title {
+      font-weight: 700;
+      color: var(--navy-900);
     }
 
     /* Buttons */
@@ -428,10 +454,13 @@
       justify-content: center;
       gap: 8px;
       min-height: 44px;
-      padding: 10px 18px;
+      max-width: 100%;
+      min-width: 0;
+      padding: 10px 16px;
       border-radius: 8px;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
+      text-align: center;
       border: 2px solid transparent;
       cursor: pointer;
       text-decoration: none;
@@ -488,19 +517,26 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 70px;
-      gap: 14px;
+      min-height: 68px;
+      gap: 10px;
     }
     .brand-link {
       display: inline-flex;
       align-items: center;
       text-decoration: none;
-      flex-shrink: 0;
+      min-width: 0;
+      max-width: calc(100% - 56px);
+    }
+    .brand-link svg {
+      width: 100%;
+      max-width: 248px;
+      height: auto;
     }
     .nav-toggle {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
       width: 44px;
       height: 44px;
       border-radius: 8px;
@@ -512,7 +548,7 @@
     .primary-nav {
       display: none;
       position: absolute;
-      top: 70px;
+      top: 68px;
       left: 0;
       right: 0;
       background: var(--white);
@@ -582,13 +618,23 @@
       }
     }
 
-    /* Breadcrumb Bar */
+    /* Breadcrumb + Search Strip */
     .breadcrumb-bar {
       background: var(--slate-100);
       border-bottom: 1px solid var(--slate-200);
-      padding-block: 8px;
+      padding-block: 10px;
       font-size: 0.875rem;
       color: var(--slate-700);
+    }
+    .top-utility-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .top-utility-grid > * {
+      min-width: 0;
     }
     .breadcrumb-bar a {
       font-weight: 600;
@@ -598,22 +644,111 @@
     .breadcrumb-bar a:hover {
       text-decoration: underline;
     }
+    .search-form {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+    @media (min-width: 760px) {
+      .search-form {
+        flex: 1 1 320px;
+        max-width: 500px;
+      }
+    }
+    .search-input-wrap {
+      flex: 1 1 auto;
+      min-width: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      width: 100%;
+      min-width: 0;
+      min-height: 40px;
+      padding: 7px 10px 7px 34px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      color: var(--slate-900);
+      background: var(--white);
+    }
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      color: var(--slate-600);
+      pointer-events: none;
+    }
+    .search-results {
+      margin-top: 10px;
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow-sm);
+    }
+    .search-results[hidden] {
+      display: none;
+    }
+    .search-results-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--slate-600);
+      margin-bottom: 8px;
+    }
+    .search-results-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+      gap: 8px;
+    }
+    .search-results-list a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      color: var(--navy-900);
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+    .search-results-list a:hover {
+      background: var(--blue-50);
+      border-color: #93c5fd;
+    }
 
     /* Hero */
     .hero {
       background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 60%, var(--navy-800) 100%);
       color: var(--white);
-      padding-block: 44px 56px;
+      padding-block: 36px 48px;
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 32px;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 28px;
       align-items: start;
     }
+    .hero-grid > * {
+      min-width: 0;
+    }
     @media (min-width: 920px) {
+      .hero {
+        padding-block: 44px 56px;
+      }
       .hero-grid {
-        grid-template-columns: 1.15fr 0.85fr;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
         gap: 40px;
       }
     }
@@ -621,34 +756,35 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      max-width: 100%;
       background: rgba(251, 191, 36, 0.16);
       border: 1px solid rgba(251, 191, 36, 0.45);
       color: var(--amber-400);
-      padding: 6px 14px;
+      padding: 6px 12px;
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .hero h1 {
       color: var(--white);
-      font-size: clamp(1.85rem, 3.8vw, 2.75rem);
-      line-height: 1.16;
+      font-size: clamp(1.6rem, 4.5vw, 2.7rem);
+      line-height: 1.18;
       margin-bottom: 14px;
     }
     .hero-lead {
       color: #e2e8f0;
-      font-size: 1.05rem;
-      margin: 0 0 20px;
+      font-size: 1rem;
+      margin: 0 0 18px;
       max-width: 620px;
     }
     .hero-points {
       list-style: none;
-      margin: 0 0 22px;
+      margin: 0 0 20px;
       padding: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 10px 16px;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+      gap: 10px 14px;
     }
     .hero-points li {
       display: flex;
@@ -656,19 +792,20 @@
       gap: 8px;
       color: #f1f5f9;
       font-weight: 600;
-      font-size: 0.94rem;
+      font-size: 0.92rem;
     }
     .hero-ctas {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 18px;
     }
     .tricity-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
+      margin-bottom: 18px;
     }
     .tricity-pill {
       background: rgba(255, 255, 255, 0.1);
@@ -678,33 +815,49 @@
       border-radius: 999px;
       font-weight: 600;
     }
+    .hero-visual {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.05);
+      width: 100%;
+      max-width: 520px;
+    }
 
     /* Quote Card */
     .quote-card {
       background: var(--white);
       color: var(--slate-900);
       border-radius: var(--radius);
-      padding: 24px;
+      padding: 22px;
       box-shadow: var(--shadow-md);
       border-top: 5px solid var(--amber-400);
+      width: 100%;
+      min-width: 0;
     }
-    .quote-card h2 {
-      font-size: 1.35rem;
-      margin-bottom: 4px;
+    .quote-card-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      margin: 0 0 4px;
+      line-height: 1.25;
     }
     .quote-card-sub {
       color: var(--slate-600);
       font-size: 0.9rem;
-      margin: 0 0 18px;
+      margin: 0 0 16px;
     }
     .form-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 12px;
+    }
+    .form-grid > * {
+      min-width: 0;
     }
     @media (min-width: 520px) {
       .form-grid-2 {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
     .form-group label {
@@ -716,6 +869,8 @@
     }
     .form-control {
       width: 100%;
+      max-width: 100%;
+      min-width: 0;
       min-height: 44px;
       padding: 9px 12px;
       border: 1.5px solid #cbd5e1;
@@ -762,9 +917,9 @@
     /* Trust Strip & Reviews */
     .trust-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
       gap: 16px;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
     .trust-card {
       background: var(--white);
@@ -773,13 +928,7 @@
       padding: 20px;
       box-shadow: var(--shadow-sm);
     }
-    .trust-card strong {
-      display: block;
-      font-size: 1.08rem;
-      color: var(--navy-900);
-      margin-bottom: 4px;
-    }
-    .trust-card p {
+    .trust-card p.trust-desc {
       margin: 0;
       color: var(--slate-600);
       font-size: 0.92rem;
@@ -796,7 +945,7 @@
     }
     .reviews-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
       gap: 16px;
     }
     .review-card {
@@ -826,18 +975,18 @@
     /* Services Grid */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 18px;
     }
     .service-card {
       background: var(--white);
       border: 1px solid var(--slate-200);
       border-radius: var(--radius);
-      padding: 24px;
+      padding: 22px;
       box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
     .service-icon-wrap {
       width: 56px;
@@ -850,45 +999,55 @@
       justify-content: center;
       color: var(--navy-900);
     }
-    .service-card h3 {
-      margin: 0;
-      font-size: 1.18rem;
-    }
-    .service-card p {
+    .service-card p.service-desc {
       margin: 0;
       color: var(--slate-600);
       font-size: 0.95rem;
     }
 
     /* Top 5 Table & Panchkula Rate Card */
+    .table-scroll-hint {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--slate-600);
+      margin: 0 0 8px;
+    }
+    @media (min-width: 820px) {
+      .table-scroll-hint {
+        display: none;
+      }
+    }
     .table-responsive {
+      display: block;
       width: 100%;
+      max-width: 100%;
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       background: var(--white);
       border: 1px solid var(--slate-200);
       border-radius: var(--radius);
       box-shadow: var(--shadow-sm);
-      margin-bottom: 36px;
+      margin-bottom: 34px;
     }
     table.compare-table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 780px;
+      min-width: 720px;
       text-align: left;
     }
     .compare-table thead th {
       background: var(--navy-900);
       color: var(--white);
-      padding: 14px 16px;
-      font-size: 0.9rem;
+      padding: 13px 15px;
+      font-size: 0.88rem;
       font-weight: 700;
       white-space: nowrap;
     }
     .compare-table tbody td {
-      padding: 14px 16px;
+      padding: 13px 15px;
       border-bottom: 1px solid var(--slate-200);
       vertical-align: middle;
-      font-size: 0.94rem;
+      font-size: 0.92rem;
     }
     .compare-table tbody tr:last-child td {
       border-bottom: 0;
@@ -932,7 +1091,7 @@
 
     .rate-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
       gap: 16px;
     }
     .rate-card {
@@ -942,12 +1101,8 @@
       padding: 20px;
       box-shadow: var(--shadow-sm);
     }
-    .rate-card h3 {
-      font-size: 1.12rem;
-      margin-bottom: 6px;
-    }
     .rate-price {
-      font-size: 1.25rem;
+      font-size: 1.22rem;
       font-weight: 800;
       color: var(--orange-700);
       margin-bottom: 8px;
@@ -975,11 +1130,7 @@
       background: var(--white);
       border: 1px solid var(--slate-200);
       border-radius: var(--radius);
-      padding: 20px;
-    }
-    .locality-box h3 {
-      font-size: 1.12rem;
-      margin-bottom: 10px;
+      padding: 18px;
     }
     .locality-tags {
       display: flex;
@@ -992,7 +1143,7 @@
       border: 1px solid var(--slate-200);
       padding: 5px 11px;
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 600;
     }
 
@@ -1008,9 +1159,14 @@
     }
     .game-hud {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
       margin-bottom: 16px;
+    }
+    @media (min-width: 560px) {
+      .game-hud {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
     }
     .hud-box {
       background: var(--slate-50);
@@ -1021,31 +1177,35 @@
     }
     .hud-label {
       display: block;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       text-transform: uppercase;
       color: var(--slate-600);
     }
     .hud-val {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 800;
       color: var(--navy-900);
     }
     .game-layout {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 20px;
       align-items: center;
     }
+    .game-layout > * {
+      min-width: 0;
+    }
     @media (min-width: 700px) {
       .game-layout {
-        grid-template-columns: 360px 1fr;
+        grid-template-columns: 360px minmax(0, 1fr);
       }
     }
     .canvas-wrap {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
     }
     #panchkulaTruckCanvas {
       width: 100%;
@@ -1060,19 +1220,17 @@
     }
     .game-controls {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       justify-content: center;
       margin-top: 12px;
       width: 100%;
       max-width: 360px;
     }
     .game-controls button {
-      flex: 1;
+      flex: 1 1 0;
+      min-width: 0;
       min-height: 46px;
-    }
-    .game-sidebar h3 {
-      margin-bottom: 8px;
-      font-size: 1.15rem;
+      padding: 8px 6px;
     }
     .game-rules {
       padding-left: 18px;
@@ -1115,13 +1273,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
+      gap: 12px;
       text-align: left;
       background: var(--white);
       border: 0;
-      padding: 16px 18px;
+      padding: 15px 16px;
       font-family: inherit;
-      font-size: 1rem;
+      font-size: 0.98rem;
       font-weight: 700;
       color: var(--navy-900);
       cursor: pointer;
@@ -1160,31 +1318,37 @@
     }
     .faq-panel-inner p {
       margin: 0;
-      padding: 0 18px 16px;
+      padding: 0 16px 15px;
       color: var(--slate-700);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
     }
 
     /* Footer */
     .site-footer {
       background: var(--navy-950);
       color: #e2e8f0;
-      padding-block: 50px 28px;
+      padding-block: 44px 28px;
     }
     .footer-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 28px;
       padding-bottom: 28px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     }
+    .footer-grid > * {
+      min-width: 0;
+    }
     @media (min-width: 820px) {
       .footer-grid {
-        grid-template-columns: 1.3fr 0.8fr 1.2fr;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.8fr) minmax(0, 1.2fr);
       }
     }
-    .site-footer h2, .site-footer h3 {
+    .footer-col-title {
       color: var(--white);
+      font-size: 1.18rem;
+      font-weight: 800;
+      margin: 0 0 12px;
     }
     .footer-links {
       list-style: none;
@@ -1222,8 +1386,8 @@
     /* Floating WhatsApp Button */
     .floating-wa {
       position: fixed;
-      right: 18px;
-      bottom: 18px;
+      right: 16px;
+      bottom: 16px;
       z-index: 95;
       display: inline-flex;
       align-items: center;
@@ -1242,13 +1406,22 @@
     .floating-wa:hover {
       background: var(--green-800);
     }
-    @media (max-width: 480px) {
+    @media (max-width: 520px) {
+      .section {
+        padding-block: 38px;
+      }
+      .quote-card, .game-shell, .service-card, .trust-card {
+        padding: 16px;
+      }
+      .game-controls .btn {
+        font-size: 0.84rem;
+      }
       .floating-wa span {
         display: none;
       }
       .floating-wa {
-        width: 54px;
-        height: 54px;
+        width: 52px;
+        height: 52px;
         padding: 0;
         justify-content: center;
       }
@@ -1292,15 +1465,32 @@
         </ul>
         <div class="header-actions">
           <a class="btn btn-primary btn-sm" href="#quote-form-box">Get Free Quote</a>
-          <a class="btn btn-whatsapp btn-sm" href="https://wa.me/919876543210?text=Hello%20Top5packersmovers%2C%20I%20need%20verified%20packers%20and%20movers%20in%20Panchkula%20%26%20Tricity." target="_blank" rel="noopener noreferrer">WhatsApp Quote</a>
+          <a class="btn btn-whatsapp btn-sm" href="https://wa.me/917009609889?text=Hello%20Top5packersmovers%2C%20I%20need%20verified%20packers%20and%20movers%20in%20Panchkula%20%26%20Tricity." target="_blank" rel="noopener noreferrer">WhatsApp Quote</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+  <!-- Breadcrumb + Panchkula & Tricity Search Bar -->
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb and Search">
     <div class="container">
-      <a href="/">Home</a> &rsaquo; <a href="packers-movers-chandigarh.html">Chandigarh Tricity</a> &rsaquo; <span aria-current="page">Packers and Movers in Panchkula</span>
+      <div class="top-utility-grid">
+        <div>
+          <a href="/">Home</a> &rsaquo; <a href="packers-movers-chandigarh.html">Chandigarh Tricity</a> &rsaquo; <span aria-current="page">Packers and Movers in Panchkula</span>
+        </div>
+        <form class="search-form" id="pklSearchForm" role="search">
+          <label class="sr-only" for="pklSearchInput">Search Panchkula sector, MDC, Pinjore or Tricity city</label>
+          <div class="search-input-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input class="search-input" type="search" id="pklSearchInput" placeholder="Search Sector 15, MDC, Pinjore, Kalka, Rates..." autocomplete="off">
+          </div>
+          <button type="submit" class="btn btn-navy btn-sm">Search</button>
+        </form>
+      </div>
+      <div class="search-results" id="searchResults" role="region" aria-live="polite" hidden></div>
     </div>
   </nav>
 
@@ -1339,8 +1529,8 @@
           </ul>
           <div class="hero-ctas">
             <a class="btn btn-primary" href="#top5-table">Compare Top 5 Panchkula Movers</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/919876543210?text=Hello%20Top5packersmovers%2C%20please%20share%20quotes%20for%20packers%20and%20movers%20in%20Panchkula." target="_blank" rel="noopener noreferrer">
-              WhatsApp Quote
+            <a class="btn btn-whatsapp" href="https://wa.me/917009609889?text=Hello%20Top5packersmovers%2C%20please%20share%20quotes%20for%20packers%20and%20movers%20in%20Panchkula." target="_blank" rel="noopener noreferrer">
+              WhatsApp Quote (+91 70096 09889)
             </a>
           </div>
           <div class="tricity-pills" aria-label="Panchkula Coverage Areas">
@@ -1351,11 +1541,15 @@
             <span class="tricity-pill">Pinjore &amp; Kalka</span>
             <span class="tricity-pill">Chandigarh &amp; Mohali</span>
           </div>
+
+          <figure class="hero-visual" style="margin: 0;">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 130' width='520' height='130'%3E%3Crect width='520' height='130' rx='10' fill='%230b1e33'/%3E%3Crect x='24' y='34' width='135' height='58' rx='6' fill='%23173a5e' stroke='%23fbbf24' stroke-width='2'/%3E%3Cpath d='M159 50h36l16 18v24h-52V50z' fill='%23f59e0b'/%3E%3Crect x='166' y='56' width='22' height='14' rx='2' fill='%23e0f2fe'/%3E%3Ccircle cx='56' cy='96' r='11' fill='%230f172a' stroke='%23cbd5e1' stroke-width='3'/%3E%3Ccircle cx='126' cy='96' r='11' fill='%230f172a' stroke='%23cbd5e1' stroke-width='3'/%3E%3Ccircle cx='186' cy='96' r='11' fill='%230f172a' stroke='%23cbd5e1' stroke-width='3'/%3E%3Ctext x='91' y='67' text-anchor='middle' font-family='Arial,sans-serif' font-size='11' font-weight='800' fill='%23ffffff'%3EPANCHKULA%3C/text%3E%3Ctext x='236' y='44' font-family='Arial,sans-serif' font-size='15' font-weight='800' fill='%23fbbf24'%3ETop 5 Packers &amp; Movers in Panchkula%3C/text%3E%3Ctext x='236' y='68' font-family='Arial,sans-serif' font-size='12' font-weight='600' fill='%23e2e8f0'%3E%E2%9C%93 Sec 1-28  %E2%9C%93 MDC  %E2%9C%93 Pinjore &amp; Kalka%3C/text%3E%3Ctext x='236' y='90' font-family='Arial,sans-serif' font-size='12' font-weight='600' fill='%2386efac'%3EGST &amp; IBA Verified &bull; Instant WhatsApp Quote%3C/text%3E%3C/svg%3E" alt="Top5packersmovers verified packers and movers in Panchkula and Tricity moving truck banner" width="520" height="130" loading="eager">
+          </figure>
         </div>
 
         <!-- Instant Quote & Estimate Form -->
         <aside class="quote-card" id="quote-form-box" aria-labelledby="quoteHeading">
-          <h2 id="quoteHeading">Get Free Panchkula Moving Estimate</h2>
+          <p class="quote-card-title" id="quoteHeading">Get Free Panchkula Moving Estimate</p>
           <p class="quote-card-sub">Calculate an instant price range and send pre-filled Panchkula shifting details via WhatsApp.</p>
 
           <form id="pklQuoteForm" novalidate>
@@ -1425,23 +1619,23 @@
         <div class="trust-grid">
           <article class="trust-card">
             <span class="trust-metric">KYC, GST &amp; IBA</span>
-            <strong>Verified &amp; IBA Approved Movers</strong>
-            <p>Active GSTIN, local Tricity office checks, and IBA certification where applicable for bank, Haryana govt, and PSU transfer bills.</p>
+            <p class="card-title">Verified &amp; IBA Approved Movers</p>
+            <p class="trust-desc">Active GSTIN, local Tricity office checks, and IBA certification where applicable for bank, Haryana govt, and PSU transfer bills.</p>
           </article>
           <article class="trust-card">
             <span class="trust-metric">Zero Hidden Fees</span>
-            <strong>Transparent Panchkula Pricing</strong>
-            <p>Clear written quotes detailing packing, labour, society lift handling, NH-5/highway tolls, GST, and transit coverage.</p>
+            <p class="card-title">Transparent Panchkula Pricing</p>
+            <p class="trust-desc">Clear written quotes detailing packing, labour, society lift handling, NH-5/highway tolls, GST, and transit coverage.</p>
           </article>
           <article class="trust-card">
             <span class="trust-metric">Multi-Layer Safety</span>
-            <strong>3-Ply / 5-Ply &amp; Foam Packing</strong>
-            <p>Bubble wrap, corrugated cartons, stretch film, and wooden crating built for Kothi furniture and delicate appliances.</p>
+            <p class="card-title">3-Ply / 5-Ply &amp; Foam Packing</p>
+            <p class="trust-desc">Bubble wrap, corrugated cartons, stretch film, and wooden crating built for Kothi furniture and delicate appliances.</p>
           </article>
           <article class="trust-card">
             <span class="trust-metric">4.8 / 5 Rating</span>
-            <strong>960+ Verified Panchkula Shifts</strong>
-            <p>Trusted on-time delivery record across Panchkula sectors, Pinjore-Parwanoo hill routes, and Pan-India corridors.</p>
+            <p class="card-title">960+ Verified Panchkula Shifts</p>
+            <p class="trust-desc">Trusted on-time delivery record across Panchkula sectors, Pinjore-Parwanoo hill routes, and Pan-India corridors.</p>
           </article>
         </div>
 
@@ -1466,7 +1660,7 @@
         <div class="section-header">
           <span class="eyebrow">Panchkula &amp; Foothill Services</span>
           <h2 id="servicesHeading">Relocation &amp; Shifting Services in Panchkula</h2>
-          <p class="section-subtitle">Complete home shifting, society apartment moves, office relocation, car/bike transport, warehousing, and insured fragile packing.</p>
+          <p class="section-subtitle">Complete <strong>home shifting Panchkula</strong>, society apartment moves, office relocation, car/bike transport, warehousing, and insured fragile packing.</p>
         </div>
 
         <div class="services-grid">
@@ -1480,8 +1674,8 @@
                 <rect x="9" y="13" width="6" height="7"/>
               </svg>
             </div>
-            <h3>Household Shifting / Kothi &amp; Flat Shifting</h3>
-            <p>1 BHK, 2 BHK, 3 BHK, and independent Kothi shifting across Sector 1&ndash;21, Sector 23&ndash;28, MDC Sector 4&ndash;6, Peer Muchalla, Dhakoli, Pinjore, and Kalka.</p>
+            <p class="card-title">Household Shifting / Kothi &amp; Flat Shifting</p>
+            <p class="service-desc">1 BHK, 2 BHK, 3 BHK, and independent Kothi shifting across Sector 1&ndash;21, Sector 23&ndash;28, MDC Sector 4&ndash;6, Peer Muchalla, Dhakoli, Pinjore, and Kalka.</p>
           </article>
 
           <!-- 2. Office Relocation -->
@@ -1494,8 +1688,8 @@
                 <path d="M7 7h2M7 11h2M7 15h2M11 7h1M11 11h1"/>
               </svg>
             </div>
-            <h3>Office Relocation &amp; Commercial Shifting</h3>
-            <p>Zero-downtime corporate, bank, and showroom relocation across Sector 5, Sector 11, Sector 22 IT Park Panchkula, and Industrial Area Phase I &amp; II.</p>
+            <p class="card-title">Office Relocation &amp; Commercial Shifting</p>
+            <p class="service-desc">Zero-downtime corporate, bank, and showroom relocation across Sector 5, Sector 11, Sector 22 IT Park Panchkula, and Industrial Area Phase I &amp; II.</p>
           </article>
 
           <!-- 3. Car Carrier -->
@@ -1509,8 +1703,8 @@
                 <path d="M5 14h14"/>
               </svg>
             </div>
-            <h3>Car Carrier / Car Transport from Panchkula</h3>
-            <p>Doorstep car pickup in Panchkula &amp; MDC using enclosed hydraulic car carriers with wheel locks and odometer logs to Delhi NCR, Mumbai, Pune &amp; Bengaluru.</p>
+            <p class="card-title">Car Carrier / Car Transport from Panchkula</p>
+            <p class="service-desc">Doorstep car pickup in Panchkula &amp; MDC using enclosed hydraulic car carriers with wheel locks and odometer logs to Delhi NCR, Mumbai, Pune &amp; Bengaluru.</p>
           </article>
 
           <!-- 4. Bike Transport -->
@@ -1524,8 +1718,8 @@
                 <path d="M14.5 8.5h3l1 3"/>
               </svg>
             </div>
-            <h3>Bike Transport / Two-Wheeler Shifting</h3>
-            <p>Scratch-free scooter and motorcycle transport wrapped in foam, bubble sheets, and corrugated packaging inside padded two-wheeler cages.</p>
+            <p class="card-title">Bike Transport / Two-Wheeler Shifting</p>
+            <p class="service-desc">Scratch-free scooter and motorcycle transport wrapped in foam, bubble sheets, and corrugated packaging inside padded two-wheeler cages.</p>
           </article>
 
           <!-- 5. Warehousing & Storage -->
@@ -1538,8 +1732,8 @@
                 <rect x="13" y="13" width="4" height="7"/>
               </svg>
             </div>
-            <h3>Warehousing &amp; Household Storage</h3>
-            <p>24/7 CCTV-monitored, pest-controlled, palletized storage warehouses in Industrial Area Panchkula, Baltana, and Zirakpur on flexible weekly or monthly plans.</p>
+            <p class="card-title">Warehousing &amp; Household Storage</p>
+            <p class="service-desc">24/7 CCTV-monitored, pest-controlled, palletized storage warehouses in Industrial Area Panchkula, Baltana, and Zirakpur on flexible weekly or monthly plans.</p>
           </article>
 
           <!-- 6. Transit Insurance & Fragile Goods Packing -->
@@ -1551,13 +1745,13 @@
                 <path d="M9 12l2 2 4-4"/>
               </svg>
             </div>
-            <h3>Transit Insurance &amp; Fragile Goods Packing</h3>
-            <p>All-risk transit insurance plus 3-ply/5-ply cartons, bubble wrap, foam corners, and carpenter-led furniture dismantling &amp; reassembly.</p>
+            <p class="card-title">Transit Insurance &amp; Fragile Goods Packing</p>
+            <p class="service-desc">All-risk transit insurance plus 3-ply/5-ply cartons, bubble wrap, foam corners, and carpenter-led furniture dismantling &amp; reassembly.</p>
           </article>
         </div>
 
         <div class="locality-box">
-          <h3>Panchkula Sectors, Societies &amp; Foothill Towns Covered</h3>
+          <p class="card-title">Panchkula Sectors, Societies &amp; Foothill Towns Covered</p>
           <div class="locality-tags">
             <span class="locality-tag">Sector 2, 4, 5, 6, 7, 8, 9, 10</span>
             <span class="locality-tag">Sector 11, 12, 12A, 14, 15, 16, 17, 19</span>
@@ -1581,9 +1775,10 @@
         <div class="section-header">
           <span class="eyebrow">2026 Panchkula Ranking</span>
           <h2 id="top5Heading">Top 5 Packers and Movers in Panchkula Comparison</h2>
-          <p class="section-subtitle">Compare verified <strong>movers in Panchkula</strong> for local sector/society shifting, foothill routes, and domestic relocation from Panchkula.</p>
+          <p class="section-subtitle">Compare verified <strong>top 5 packers and movers Panchkula</strong> partners for local sector/society shifting, foothill routes, and <strong>domestic relocation Panchkula</strong>.</p>
         </div>
 
+        <p class="table-scroll-hint">Swipe table left/right to view rates &amp; WhatsApp action &rarr;</p>
         <div class="table-responsive" tabindex="0" aria-label="Top 5 Packers and Movers in Panchkula Table">
           <table class="compare-table">
             <thead>
@@ -1599,9 +1794,9 @@
             <tbody>
               <tr>
                 <td><span class="rank-badge rank-badge-top">#1</span></td>
-                <td><strong>Shivalik Foothills Packers &amp; Movers</strong><br><small>GST &amp; IBA Verified</small></td>
+                <td><span class="cell-title">Shivalik Foothills Packers &amp; Movers</span><br><small>GST &amp; IBA Verified</small></td>
                 <td>Sector 2&ndash;21 Kothi moves, MDC &amp; Shimla/Solan NH-5 hill-route specialists</td>
-                <td><strong>&#8377;3,800 &ndash; &#8377;14,500</strong></td>
+                <td class="cell-title">&#8377;3,800 &ndash; &#8377;14,500</td>
                 <td><span class="rating-pill">4.9 / 5</span></td>
                 <td>
                   <div class="action-group">
@@ -1611,9 +1806,9 @@
               </tr>
               <tr>
                 <td><span class="rank-badge">#2</span></td>
-                <td><strong>Panchkula Prime Relocations</strong><br><small>Sector 20 &amp; Peer Muchalla Hub</small></td>
+                <td><span class="cell-title">Panchkula Prime Relocations</span><br><small>Sector 20 &amp; Peer Muchalla Hub</small></td>
                 <td>High-rise society lift shifting, 5-ply bubble packing &amp; carpenter crew</td>
-                <td><strong>&#8377;3,600 &ndash; &#8377;13,200</strong></td>
+                <td class="cell-title">&#8377;3,600 &ndash; &#8377;13,200</td>
                 <td><span class="rating-pill">4.8 / 5</span></td>
                 <td>
                   <div class="action-group">
@@ -1623,9 +1818,9 @@
               </tr>
               <tr>
                 <td><span class="rank-badge">#3</span></td>
-                <td><strong>Ghaggar Express Car &amp; Cargo</strong><br><small>Intercity &amp; Vehicle Experts</small></td>
+                <td><span class="cell-title">Ghaggar Express Car &amp; Cargo</span><br><small>Intercity &amp; Vehicle Experts</small></td>
                 <td>Domestic relocation from Panchkula, enclosed car carriers &amp; bike cages</td>
-                <td><strong>&#8377;4,100 &ndash; &#8377;15,400</strong></td>
+                <td class="cell-title">&#8377;4,100 &ndash; &#8377;15,400</td>
                 <td><span class="rating-pill">4.8 / 5</span></td>
                 <td>
                   <div class="action-group">
@@ -1635,9 +1830,9 @@
               </tr>
               <tr>
                 <td><span class="rank-badge">#4</span></td>
-                <td><strong>Tricity Value Movers Panchkula</strong><br><small>Budget &amp; Trans-Ghaggar</small></td>
+                <td><span class="cell-title">Tricity Value Movers Panchkula</span><br><small>Budget &amp; Trans-Ghaggar</small></td>
                 <td>Affordable movers in Panchkula for 1 BHK, Sector 25&ndash;28, Pinjore &amp; Kalka</td>
-                <td><strong>&#8377;3,500 &ndash; &#8377;11,600</strong></td>
+                <td class="cell-title">&#8377;3,500 &ndash; &#8377;11,600</td>
                 <td><span class="rating-pill">4.7 / 5</span></td>
                 <td>
                   <div class="action-group">
@@ -1647,9 +1842,9 @@
               </tr>
               <tr>
                 <td><span class="rank-badge">#5</span></td>
-                <td><strong>MDC &amp; Industrial Storage Movers</strong><br><small>Industrial Area Phase I &amp; II</small></td>
+                <td><span class="cell-title">MDC &amp; Industrial Storage Movers</span><br><small>Industrial Area Phase I &amp; II</small></td>
                 <td>Corporate office relocation, IT Park Sector 22 &amp; CCTV warehouse storage</td>
-                <td><strong>&#8377;4,400 &ndash; &#8377;15,800</strong></td>
+                <td class="cell-title">&#8377;4,400 &ndash; &#8377;15,800</td>
                 <td><span class="rating-pill">4.6 / 5</span></td>
                 <td>
                   <div class="action-group">
@@ -1664,13 +1859,13 @@
         <!-- Panchkula Rate Card -->
         <div id="rate-card" class="section-header" style="margin-bottom: 24px;">
           <span class="eyebrow">Panchkula Shifting Rate Guide</span>
-          <h2>Panchkula Packers &amp; Movers Rate Card</h2>
-          <p class="section-subtitle">Estimated pricing for local shifting in Panchkula &amp; Tricity as well as intercity packers and movers from Panchkula.</p>
+          <h3>Panchkula Packers &amp; Movers Rate Card</h3>
+          <p class="section-subtitle">Estimated pricing for local shifting in Panchkula &amp; Tricity as well as <strong>intercity packers and movers from Panchkula</strong>.</p>
         </div>
 
         <div class="rate-grid">
           <article class="rate-card">
-            <h3>1 BHK / PG Shifting</h3>
+            <p class="card-title">1 BHK / PG Shifting</p>
             <div class="rate-price">&#8377;3,600 &ndash; &#8377;6,400 (Local)</div>
             <ul>
               <li>Panchkula &ndash; Delhi NCR: &#8377;8,500 &ndash; &#8377;13,500</li>
@@ -1679,7 +1874,7 @@
             </ul>
           </article>
           <article class="rate-card">
-            <h3>2 BHK Flat Shifting</h3>
+            <p class="card-title">2 BHK Flat Shifting</p>
             <div class="rate-price">&#8377;5,500 &ndash; &#8377;10,500 (Local)</div>
             <ul>
               <li>Panchkula &ndash; Delhi NCR: &#8377;11,500 &ndash; &#8377;18,500</li>
@@ -1688,7 +1883,7 @@
             </ul>
           </article>
           <article class="rate-card">
-            <h3>3 BHK / Kothi Shifting</h3>
+            <p class="card-title">3 BHK / Kothi Shifting</p>
             <div class="rate-price">&#8377;8,500 &ndash; &#8377;15,800 (Local)</div>
             <ul>
               <li>Panchkula &ndash; Delhi NCR: &#8377;15,500 &ndash; &#8377;25,000</li>
@@ -1697,7 +1892,7 @@
             </ul>
           </article>
           <article class="rate-card">
-            <h3>Car &amp; Bike from Panchkula</h3>
+            <p class="card-title">Car &amp; Bike from Panchkula</p>
             <div class="rate-price">&#8377;3,000 &ndash; &#8377;16,500 (Intercity)</div>
             <ul>
               <li>Bike Transport (Pan-India): &#8377;3,000 &ndash; &#8377;7,800</li>
@@ -1708,7 +1903,7 @@
         </div>
 
         <p class="rate-note">
-          <strong>Rate Disclaimer:</strong> Estimated local Panchkula and intercity rates shown above are informational benchmarks only. Final charges depend on pre-move inventory survey, packing material grade, floor/lift access in sectors or societies, foothill terrain (Pinjore/Kalka/Himachal routes), toll taxes, GST, and optional transit insurance.
+          <span class="cell-title">Rate Disclaimer:</span> Estimated local Panchkula and intercity rates shown above are informational benchmarks only. Final charges depend on pre-move inventory survey, packing material grade, floor/lift access in sectors or societies, foothill terrain (Pinjore/Kalka/Himachal routes), toll taxes, GST, and optional transit insurance.
         </p>
       </div>
     </section>
@@ -1753,13 +1948,13 @@
             </div>
 
             <div class="game-sidebar">
-              <h3>Quick Packing Rules</h3>
+              <p class="card-title">Quick Packing Rules</p>
               <ul class="game-rules">
-                <li>Tap any truck column, click <strong>Drop</strong>, or use <strong>Arrow Keys &amp; Spacebar</strong>.</li>
-                <li><strong>Heavy Boxes</strong> (Books, Sofa, Wood): +20 pts (+10 base bonus on bottom 2 rows).</li>
-                <li><strong>Fragile Boxes</strong> (Glassware, LED TV): +35 pts (+15 bonus when stacked above sturdy boxes).</li>
-                <li><strong>Avoid Damage:</strong> Dropping Heavy on Fragile costs -10 net pts.</li>
-                <li><strong>Full Row Strap:</strong> Complete a 6-box horizontal layer for <strong>+100 Bonus</strong>!</li>
+                <li>Tap any truck column, click Drop, or use Arrow Keys &amp; Spacebar.</li>
+                <li>Heavy Boxes (Books, Sofa, Wood): +20 pts (+10 base bonus on bottom 2 rows).</li>
+                <li>Fragile Boxes (Glassware, LED TV): +35 pts (+15 bonus when stacked above sturdy boxes).</li>
+                <li>Avoid Damage: Dropping Heavy on Fragile costs -10 net pts.</li>
+                <li>Full Row Strap: Complete a 6-box horizontal layer for +100 Bonus!</li>
               </ul>
 
               <div class="game-status" id="gameStatus" role="status" aria-live="polite">
@@ -2059,21 +2254,22 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h2>Top5packersmovers &mdash; Panchkula</h2>
+          <p class="footer-col-title"><strong>Top5packersmovers</strong> &mdash; Panchkula</p>
           <p>
-            Top5packersmovers is a dedicated comparison and relocation inquiry platform helping residents and businesses find verified <strong>packers and movers in Panchkula</strong> and Tricity for local shifting, domestic relocation, car carrier, bike transport, warehousing, and transit-insured moves.
+            Top5packersmovers is a dedicated comparison and relocation inquiry platform helping residents and businesses find verified packers and movers in Panchkula and Tricity for local shifting, domestic relocation, car carrier, bike transport, warehousing, and transit-insured moves.
           </p>
-          <p><strong>Panchkula &amp; Tricity Coverage:</strong> Sector 1&ndash;21, Sector 23&ndash;28 (Trans-Ghaggar), Mansa Devi Complex (MDC), Peer Muchalla, Dhakoli, Pinjore, Kalka, Chandigarh, Mohali, and Zirakpur.</p>
+          <p>Panchkula &amp; Tricity Coverage: Sector 1&ndash;21, Sector 23&ndash;28 (Trans-Ghaggar), Mansa Devi Complex (MDC), Peer Muchalla, Dhakoli, Pinjore, Kalka, Chandigarh, Mohali, and Zirakpur.</p>
         </div>
 
         <div>
-          <h3>Quick Links</h3>
+          <p class="footer-col-title">Quick Links</p>
           <ul class="footer-links">
             <li><a href="/">Home (All India &amp; North India)</a></li>
             <li><a href="packers-movers-chandigarh.html">Packers and Movers in Chandigarh</a></li>
             <li><a href="packers-movers-mohali.html">Packers and Movers in Mohali</a></li>
-            <li><a href="#quote-form-box">Get Free Panchkula Quote</a></li>
-            <li><a href="#services">Panchkula Shifting Services</a></li>
+            <li><a href="packers-movers-zirakpur.html">Packers and Movers in Zirakpur</a></li>
+            <li><a href="packers-movers-derabassi.html">Packers and Movers in Derabassi</a></li>
+            <li><a href="packers-movers-new-chandigarh.html">Packers and Movers in New Chandigarh</a></li>
             <li><a href="#top5-table">Top 5 Panchkula Comparison</a></li>
             <li><a href="#rate-card">Panchkula Rate Card</a></li>
             <li><a href="#packing-game">Truck Packing Mini-Game</a></li>
@@ -2082,24 +2278,24 @@
         </div>
 
         <div>
-          <h3>Tricity Office</h3>
+          <p class="footer-col-title">Tricity Office</p>
           <address class="address-box">
-            <strong>Top5packersmovers</strong><br>
+            Top5packersmovers<br>
             B, Ground Flr, Ericsson India Pvt Ltd DLF, Tower, IT Park Rd, Phase - I, Sector 13, Chandigarh, Sukteri, Chandigarh 160101<br><br>
-            <strong>Phone / WhatsApp:</strong> <a href="tel:+919876543210" style="color: #fbbf24;">+91 98765 43210</a>
+            Phone / WhatsApp: <a href="tel:+917009609889" style="color: #fbbf24;">+91 70096 09889</a>
           </address>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p><strong>Disclaimer:</strong> All estimated rates, rate cards, and Top 5 rankings displayed on Top5packersmovers are informational only and subject to pre-move physical/video survey, inventory verification, floor/society lift accessibility in Panchkula, foothill route conditions, GST, toll taxes, and optional transit insurance.</p>
+        <p><span style="color:#fbbf24;font-weight:800;">Disclaimer:</span> All estimated rates, rate cards, and Top 5 rankings displayed on Top5packersmovers are informational only and subject to pre-move physical/video survey, inventory verification, floor/society lift accessibility in Panchkula, foothill route conditions, GST, toll taxes, and optional transit insurance.</p>
         <p>&copy; 2026 Top5packersmovers. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a class="floating-wa" href="https://wa.me/919876543210?text=Hello%20Top5packersmovers%2C%20I%20need%20verified%20packers%20and%20movers%20in%20Panchkula%20%26%20Tricity." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Quote for Packers and Movers in Panchkula">
+  <a class="floating-wa" href="https://wa.me/917009609889?text=Hello%20Top5packersmovers%2C%20I%20need%20verified%20packers%20and%20movers%20in%20Panchkula%20%26%20Tricity." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Quote for Packers and Movers in Panchkula">
     <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
       <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.79 14.08c-.24.68-1.41 1.3-1.95 1.38-.51.08-1.15.11-1.85-.11-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.37.79-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.24.59.83 2.03.9 2.18.08.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.45.51-.15.15-.3.31-.13.61.17.3.77 1.27 1.65 2.06 1.14 1.02 2.1 1.33 2.4 1.48.3.15.48.13.66-.08.18-.2.76-.88.96-1.18.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.96.3.15.5.22.57.34.08.13.08.73-.16 1.41z"/>
     </svg>
@@ -2110,7 +2306,7 @@
     (function () {
       "use strict";
 
-      var WHATSAPP_NUMBER = "919876543210";
+      var WHATSAPP_NUMBER = "917009609889";
 
       /* 1. Mobile Navigation Toggle */
       var navToggle = document.getElementById("navToggle");
@@ -2132,7 +2328,92 @@
         });
       }
 
-      /* 2. Panchkula Instant Quote Estimator + WhatsApp Formatter */
+      /* 2. Panchkula & Tricity Search Bar */
+      var searchForm = document.getElementById("pklSearchForm");
+      var searchInput = document.getElementById("pklSearchInput");
+      var searchResults = document.getElementById("searchResults");
+
+      var searchEntries = [
+        { label: "Top 5 Packers and Movers in Panchkula Table", href: "#top5-table" },
+        { label: "Panchkula 1 BHK / 2 BHK / 3 BHK / Kothi Rate Card", href: "#rate-card" },
+        { label: "Sector 1-21, MDC 4-6 & Trans-Ghaggar Sector 23-28 Movers", href: "#services" },
+        { label: "Pinjore, Kalka, Peer Muchalla & Shimla Route Shifting", href: "#services" },
+        { label: "Car Carrier & Bike Transport from Panchkula", href: "#services" },
+        { label: "Truck Loading & Packing Mini-Game (30s)", href: "#packing-game" },
+        { label: "22 Panchkula Packers & Movers FAQs", href: "#faqs" },
+        { label: "Packers and Movers in Chandigarh", href: "packers-movers-chandigarh.html" },
+        { label: "Packers and Movers in Mohali", href: "packers-movers-mohali.html" },
+        { label: "Packers and Movers in Zirakpur", href: "packers-movers-zirakpur.html" },
+        { label: "Packers and Movers in Derabassi", href: "packers-movers-derabassi.html" },
+        { label: "Packers and Movers in New Chandigarh", href: "packers-movers-new-chandigarh.html" },
+        { label: "All Punjab, Haryana & HP Cities (Home Page)", href: "/" }
+      ];
+
+      function escapeHtml(str) {
+        return String(str).replace(/[&<>"']/g, function (ch) {
+          return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" })[ch];
+        });
+      }
+
+      function renderSearch(query, autoGo) {
+        var q = query.trim().toLowerCase();
+        if (!q) {
+          searchResults.hidden = true;
+          searchResults.innerHTML = "";
+          return;
+        }
+        var matches = searchEntries.filter(function (item) {
+          return item.label.toLowerCase().indexOf(q) !== -1;
+        });
+
+        if (autoGo && matches.length === 1) {
+          window.location.href = matches[0].href;
+          return;
+        }
+
+        if (matches.length === 0) {
+          searchResults.innerHTML =
+            "<div class='search-results-head'><span>No direct match for &ldquo;" + escapeHtml(query) + "&rdquo;</span>" +
+            "<button type='button' class='btn btn-outline btn-sm' id='closeSearchBtn'>Close</button></div>" +
+            "<a class='btn btn-primary btn-sm' href='#quote-form-box' id='prefillPklQuote'>Get Panchkula Quote for " + escapeHtml(query) + "</a>";
+          searchResults.hidden = false;
+          var prefill = document.getElementById("prefillPklQuote");
+          if (prefill) {
+            prefill.addEventListener("click", function () {
+              var fromField = document.getElementById("qFrom");
+              if (fromField) fromField.value = query.trim() + ", Panchkula";
+            });
+          }
+        } else {
+          var listHtml = matches.slice(0, 8).map(function (m) {
+            return "<li><a href='" + escapeHtml(m.href) + "'>" + escapeHtml(m.label) + "</a></li>";
+          }).join("");
+          searchResults.innerHTML =
+            "<div class='search-results-head'><span>" + matches.length + " matching Panchkula / Tricity results</span>" +
+            "<button type='button' class='btn btn-outline btn-sm' id='closeSearchBtn'>Close</button></div>" +
+            "<ul class='search-results-list'>" + listHtml + "</ul>";
+          searchResults.hidden = false;
+        }
+
+        var closeBtn = document.getElementById("closeSearchBtn");
+        if (closeBtn) {
+          closeBtn.addEventListener("click", function () {
+            searchResults.hidden = true;
+          });
+        }
+      }
+
+      if (searchInput && searchForm) {
+        searchInput.addEventListener("input", function () {
+          renderSearch(searchInput.value, false);
+        });
+        searchForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          renderSearch(searchInput.value, true);
+        });
+      }
+
+      /* 3. Panchkula Instant Quote Estimator + WhatsApp Formatter */
       var quoteForm = document.getElementById("pklQuoteForm");
       var quoteError = document.getElementById("quoteError");
       var quoteResult = document.getElementById("quoteResult");
@@ -2167,12 +2448,6 @@
           "Warehousing & Storage": "₹2,500 – ₹7,500 / month (Panchkula / Tricity Storage)"
         };
         return ranges[shiftType] || "₹3,600 – ₹15,800 (Subject to Survey)";
-      }
-
-      function escapeHtml(str) {
-        return String(str).replace(/[&<>"']/g, function (ch) {
-          return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" })[ch];
-        });
       }
 
       if (quoteForm) {
@@ -2219,7 +2494,7 @@
         });
       }
 
-      /* 3. Comparison Table WhatsApp Action Buttons */
+      /* 4. Comparison Table WhatsApp Action Buttons */
       document.querySelectorAll(".provider-wa-btn").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var provider = btn.getAttribute("data-provider") || "Top 5 Panchkula Mover";
@@ -2229,7 +2504,7 @@
         });
       });
 
-      /* 4. Accessible FAQ Accordion */
+      /* 5. Accessible FAQ Accordion */
       document.querySelectorAll(".faq-btn").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var isExpanded = btn.getAttribute("aria-expanded") === "true";
@@ -2241,7 +2516,7 @@
         });
       });
 
-      /* 5. Truck Loading / Packing Mini-Game (30s Timer) */
+      /* 6. Truck Loading / Packing Mini-Game (30s Timer) */
       var canvas = document.getElementById("panchkulaTruckCanvas");
       if (canvas && canvas.getContext) {
         var ctx = canvas.getContext("2d");
